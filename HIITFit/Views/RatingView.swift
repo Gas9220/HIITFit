@@ -37,9 +37,10 @@ struct RatingView: View {
                         updateRating(index: index)
                     }
                     .onAppear {
-                        let index = ratings.index(ratings.startIndex, offsetBy: exerciseIndex)
-                        let character = ratings[index]
-                        rating = character.wholeNumberValue ?? 0
+                        convertRating()
+                    }
+                    .onChange(of: ratings) {
+                        convertRating()
                     }
             }
         }
@@ -51,6 +52,12 @@ struct RatingView: View {
 
         let index = ratings.index(ratings.startIndex, offsetBy: exerciseIndex)
         ratings.replaceSubrange(index...index, with: String(rating))
+    }
+
+    fileprivate func convertRating() {
+        let index = ratings.index(ratings.startIndex, offsetBy: exerciseIndex)
+        let character = ratings[index]
+        rating = character.wholeNumberValue ?? 0
     }
 }
 
