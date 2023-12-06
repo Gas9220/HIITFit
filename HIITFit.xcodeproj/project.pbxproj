@@ -70,6 +70,7 @@
 				6B66632A2B1FCD33005A9003 /* HIITFitApp.swift */,
 				6BFE0FA32B20700A00409B5C /* Exercise.swift */,
 				6B66633C2B1FCF52005A9003 /* Views */,
+				6B66633D2B1FCFAC005A9003 /* Videos */,
 				6B66632E2B1FCD35005A9003 /* Assets.xcassets */,
 				6B6663302B1FCD35005A9003 /* Preview Content */,
 			);
@@ -91,7 +92,6 @@
 				6B6663382B1FCF27005A9003 /* WelcomeView.swift */,
 				6B66633A2B1FCF37005A9003 /* ExerciseView.swift */,
 				6BFE0FA12B206EC000409B5C /* HeaderView.swift */,
-				6B66633D2B1FCFAC005A9003 /* Videos */,
 			);
 			path = Views;
 			sourceTree = "<group>";
