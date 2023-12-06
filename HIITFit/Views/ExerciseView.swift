@@ -12,7 +12,6 @@ struct ExerciseView: View {
 
     @Binding var selectedTab: Int
 
-    @State private var rating = 0
     @State private var showHistory = false
     @State private var showSuccess = false
     @State private var timerDone = false
@@ -55,7 +54,7 @@ struct ExerciseView: View {
 
                 Spacer()
 
-                RatingView(rating: $rating)
+                RatingView(exerciseIndex: index)
                     .padding()
 
                 Button("History") {
