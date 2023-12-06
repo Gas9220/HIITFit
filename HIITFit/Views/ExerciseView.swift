@@ -11,6 +11,8 @@ struct ExerciseView: View {
     @Binding var selectedTab: Int
 
     @State private var rating = 0
+    @State private var showHistory = false
+    @State private var showSuccess = false
 
     let index: Int
 
@@ -39,6 +41,10 @@ struct ExerciseView: View {
                 HStack(spacing: 150) {
                     startButton
                     doneButton
+                        .sheet(isPresented: $showSuccess) {
+                            SuccessView(selectedTab: $selectedTab)
+                                .presentationDetents([.medium, .large])
+                        }
                 }
                 .font(.title3)
                 .padding()
@@ -49,9 +55,12 @@ struct ExerciseView: View {
                 Spacer()
 
                 Button("History") {
-
+                    showHistory.toggle()
                 }
                 .padding(.bottom)
+                .sheet(isPresented: $showHistory) {
+                    HistoryView(showHistory: $showHistory)
+                }
             }
         }
     }
@@ -63,12 +72,16 @@ struct ExerciseView: View {
     var doneButton: some View {
         Button("Done") {
             withAnimation {
-                selectedTab = lastExercise ? 9 : selectedTab + 1
+                if lastExercise {
+                    showSuccess.toggle()
+                } else {
+                    selectedTab += 1
+                }
             }
         }
     }
 }
 
 #Preview {
-    ExerciseView(selectedTab: .constant(1), index: 0)
+    ExerciseView(selectedTab: .constant(1), index: 3)
 }
