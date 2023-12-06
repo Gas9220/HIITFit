@@ -10,6 +10,8 @@ import SwiftUI
 struct ExerciseView: View {
     @Binding var selectedTab: Int
 
+    @State private var rating = 0
+
     let index: Int
 
     var exercise: Exercise {
@@ -41,7 +43,7 @@ struct ExerciseView: View {
                 .font(.title3)
                 .padding()
 
-                RatingView()
+                RatingView(rating: $rating)
                     .padding()
 
                 Spacer()
