@@ -23,6 +23,7 @@
 		6BFE0FA82B207BCA00409B5C /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE0FA72B207BCA00409B5C /* VideoPlayerView.swift */; };
 		6BFE0FAA2B2084D100409B5C /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE0FA92B2084D100409B5C /* HistoryView.swift */; };
 		6BFE0FAC2B2085D100409B5C /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE0FAB2B2085D100409B5C /* DateExtension.swift */; };
+		6BFE0FAE2B20895700409B5C /* HistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE0FAD2B20895700409B5C /* HistoryStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		6BFE0FA72B207BCA00409B5C /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		6BFE0FA92B2084D100409B5C /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		6BFE0FAB2B2085D100409B5C /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		6BFE0FAD2B20895700409B5C /* HistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				6B66632A2B1FCD33005A9003 /* HIITFitApp.swift */,
-				6BFE0FA32B20700A00409B5C /* Exercise.swift */,
 				6BFE0FAB2B2085D100409B5C /* DateExtension.swift */,
+				6BFE0FAF2B20895B00409B5C /* Model */,
 				6B66633C2B1FCF52005A9003 /* Views */,
 				6B66633D2B1FCFAC005A9003 /* Videos */,
 				6B66632E2B1FCD35005A9003 /* Assets.xcassets */,
@@ -117,6 +119,15 @@
 				6B6663412B1FCFAC005A9003 /* burpee.mp4 */,
 			);
 			path = Videos;
+			sourceTree = "<group>";
+		};
+		6BFE0FAF2B20895B00409B5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6BFE0FA32B20700A00409B5C /* Exercise.swift */,
+				6BFE0FAD2B20895700409B5C /* HistoryStore.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +207,7 @@
 				6BFE0FA22B206EC000409B5C /* HeaderView.swift in Sources */,
 				6BFE0FAC2B2085D100409B5C /* DateExtension.swift in Sources */,
 				6B66633B2B1FCF37005A9003 /* ExerciseView.swift in Sources */,
+				6BFE0FAE2B20895700409B5C /* HistoryStore.swift in Sources */,
 				6B66632D2B1FCD33005A9003 /* ContentView.swift in Sources */,
 				6B6663392B1FCF27005A9003 /* WelcomeView.swift in Sources */,
 				6B66632B2B1FCD33005A9003 /* HIITFitApp.swift in Sources */,
