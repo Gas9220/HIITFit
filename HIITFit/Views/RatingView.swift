@@ -18,6 +18,16 @@ struct RatingView: View {
     let onColor = Color.red
     let offColor = Color.gray
 
+    init(exerciseIndex: Int) {
+        self.exerciseIndex = exerciseIndex
+
+        let desiredLength = Exercise.exercises.count
+
+        if ratings.count < desiredLength {
+            ratings = ratings.padding(toLength: desiredLength, withPad: "0", startingAt: 0)
+        }
+    }
+
     var body: some View {
         HStack {
             ForEach(1 ..< maximumRating + 1, id: \.self) { index in
