@@ -24,6 +24,7 @@
 		6BFE0FAA2B2084D100409B5C /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE0FA92B2084D100409B5C /* HistoryView.swift */; };
 		6BFE0FAC2B2085D100409B5C /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE0FAB2B2085D100409B5C /* DateExtension.swift */; };
 		6BFE0FAE2B20895700409B5C /* HistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE0FAD2B20895700409B5C /* HistoryStore.swift */; };
+		6BFE0FB12B208AFD00409B5C /* HistoryStoreDevData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE0FB02B208AFD00409B5C /* HistoryStoreDevData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		6BFE0FA92B2084D100409B5C /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		6BFE0FAB2B2085D100409B5C /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		6BFE0FAD2B20895700409B5C /* HistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStore.swift; sourceTree = "<group>"; };
+		6BFE0FB02B208AFD00409B5C /* HistoryStoreDevData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStoreDevData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				6B6663312B1FCD35005A9003 /* Preview Assets.xcassets */,
+				6BFE0FB02B208AFD00409B5C /* HistoryStoreDevData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BFE0FB12B208AFD00409B5C /* HistoryStoreDevData.swift in Sources */,
 				6BFE0FA22B206EC000409B5C /* HeaderView.swift in Sources */,
 				6BFE0FAC2B2085D100409B5C /* DateExtension.swift in Sources */,
 				6B66633B2B1FCF37005A9003 /* ExerciseView.swift in Sources */,
