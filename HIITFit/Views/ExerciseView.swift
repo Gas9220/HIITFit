@@ -13,6 +13,8 @@ struct ExerciseView: View {
     @State private var rating = 0
     @State private var showHistory = false
     @State private var showSuccess = false
+    @State private var timerDone = false
+    @State private var showTimer = false
 
     let index: Int
 
@@ -24,23 +26,19 @@ struct ExerciseView: View {
         index + 1 == Exercise.exercises.count
     }
 
-    let interval: TimeInterval = 3
-
     var body: some View {
         GeometryReader { geometry in
-            VStack {
+            VStack(spacing: 0) {
                 HeaderView(selectedTab: $selectedTab, titleText: exercise.exerciseName)
                     .padding(.bottom)
 
                 VideoPlayerView(videoName: exercise.videoName)
                     .frame(height: geometry.size.height * 0.45)
 
-                Text(Date().addingTimeInterval(interval), style: .timer)
-                    .font(.system(size: geometry.size.height * 0.07))
-
                 HStack(spacing: 150) {
                     startButton
                     doneButton
+                        .disabled(!timerDone)
                         .sheet(isPresented: $showSuccess) {
                             SuccessView(selectedTab: $selectedTab)
                                 .presentationDetents([.medium, .large])
@@ -49,10 +47,14 @@ struct ExerciseView: View {
                 .font(.title3)
                 .padding()
 
-                RatingView(rating: $rating)
-                    .padding()
+                if showTimer {
+                    TimerView(timerDone: $timerDone, size: geometry.size.height * 0.07)
+                }
 
                 Spacer()
+
+                RatingView(rating: $rating)
+                    .padding()
 
                 Button("History") {
                     showHistory.toggle()
@@ -66,7 +68,9 @@ struct ExerciseView: View {
     }
 
     var startButton: some View {
-        Button("Start Exercise") { }
+        Button("Start Exercise") { 
+            showTimer.toggle()
+        }
     }
 
     var doneButton: some View {
@@ -77,6 +81,9 @@ struct ExerciseView: View {
                 } else {
                     selectedTab += 1
                 }
+
+                timerDone = false
+                showTimer.toggle()
             }
         }
     }

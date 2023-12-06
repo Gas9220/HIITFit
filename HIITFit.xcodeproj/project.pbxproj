@@ -27,6 +27,7 @@
 		6BFE0FB12B208AFD00409B5C /* HistoryStoreDevData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE0FB02B208AFD00409B5C /* HistoryStoreDevData.swift */; };
 		6BFE0FB32B20916B00409B5C /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE0FB22B20916B00409B5C /* ImageExtension.swift */; };
 		6BFE0FB52B2093DA00409B5C /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE0FB42B2093DA00409B5C /* SuccessView.swift */; };
+		6BFE0FB72B20B8E800409B5C /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE0FB62B20B8E800409B5C /* TimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		6BFE0FB02B208AFD00409B5C /* HistoryStoreDevData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStoreDevData.swift; sourceTree = "<group>"; };
 		6BFE0FB22B20916B00409B5C /* ImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		6BFE0FB42B2093DA00409B5C /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
+		6BFE0FB62B20B8E800409B5C /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				6BFE0FA52B207AA600409B5C /* RatingView.swift */,
 				6BFE0FA92B2084D100409B5C /* HistoryView.swift */,
 				6BFE0FB42B2093DA00409B5C /* SuccessView.swift */,
+				6BFE0FB62B20B8E800409B5C /* TimerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BFE0FB72B20B8E800409B5C /* TimerView.swift in Sources */,
 				6BFE0FB12B208AFD00409B5C /* HistoryStoreDevData.swift in Sources */,
 				6BFE0FA22B206EC000409B5C /* HeaderView.swift in Sources */,
 				6BFE0FB32B20916B00409B5C /* ImageExtension.swift in Sources */,
