@@ -34,6 +34,19 @@ struct WelcomeView: View {
                     Image("step-up")
                         .resizedToFill(width: 240, height: 240)
                 }
+
+                Button {
+
+                } label: {
+                    Text("Get Started")
+                    Image(systemName: "arrow.right.circle")
+                }
+                .font(.title2)
+                .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(Color.gray, lineWidth: 2)
+                )
             }
         }
     }
