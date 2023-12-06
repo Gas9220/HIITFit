@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ExerciseView: View {
+    @EnvironmentObject var history: HistoryStore
+
     @Binding var selectedTab: Int
 
     @State private var rating = 0
@@ -75,6 +77,8 @@ struct ExerciseView: View {
 
     var doneButton: some View {
         Button("Done") {
+            history.addDoneExercise(Exercise.exercises[index].exerciseName)
+
             withAnimation {
                 if lastExercise {
                     showSuccess.toggle()
@@ -90,5 +94,6 @@ struct ExerciseView: View {
 }
 
 #Preview {
-    ExerciseView(selectedTab: .constant(1), index: 3)
+    ExerciseView(selectedTab: .constant(0), index: 0)
+        .environmentObject(HistoryStore())
 }
