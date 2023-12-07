@@ -16,14 +16,25 @@ struct HeaderView: View {
         VStack {
             Text(titleText)
                 .font(.largeTitle)
+                .fontWeight(.black)
+                .foregroundStyle(.white)
 
             HStack {
                 ForEach(Exercise.exercises.indices, id: \.self) { index in
-                    let fill = index == selectedTab ? ".fill" : ""
-                    Image(systemName: "\(index + 1).circle\(fill)")
-                        .onTapGesture {
-                            selectedTab = index
-                        }
+                    let isActive = index == selectedTab
+
+                    ZStack {
+                        Circle()
+                            .frame(width: 15, height: 15)
+
+                        Circle()
+                            .frame(width: 30, height: 30)
+                            .opacity(isActive ? 0.5 : 0)
+                    }
+                    .foregroundStyle(.white)
+                    .onTapGesture {
+                      selectedTab = index
+                    }
                 }
             }
             .font(.title2)
@@ -33,5 +44,6 @@ struct HeaderView: View {
 
 #Preview {
     HeaderView(selectedTab: .constant(0), titleText: "Squat")
+        .background(Color.gray)
         .previewLayout(.sizeThatFits)
 }
