@@ -37,7 +37,7 @@ extension WelcomeView {
         .padding(.leading, 20)
         .padding(.bottom, 10)
     }
-    
+
     static var welcomeText: some View {
         return HStack(alignment: .bottom) {
             VStack(alignment: .leading) {
@@ -49,6 +49,7 @@ extension WelcomeView {
                     .font(.headline)
                     .fontWeight(.medium)
                     .kerning(2)
+                    .fixedSize(horizontal: false, vertical: true)
             }
         }
     }
