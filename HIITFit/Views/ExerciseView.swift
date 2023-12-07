@@ -29,40 +29,48 @@ struct ExerciseView: View {
 
     var body: some View {
         GeometryReader { geometry in
+
             VStack(spacing: 0) {
+
                 HeaderView(selectedTab: $selectedTab, titleText: exercise.exerciseName)
                     .padding(.bottom)
 
-                VideoPlayerView(videoName: exercise.videoName)
-                    .frame(height: geometry.size.height * 0.45)
+                ContainerView {
+                    VStack {
+                        VideoPlayerView(videoName: exercise.videoName)
+                            .frame(height: geometry.size.height * 0.35)
+                            .padding(20)
 
-                HStack(spacing: 150) {
-                    startButton
-                    doneButton
-                        .disabled(!timerDone)
-                        .sheet(isPresented: $showSuccess) {
-                            SuccessView(selectedTab: $selectedTab)
-                                .presentationDetents([.medium, .large])
+                        HStack(spacing: 150) {
+                            startButton
+                            doneButton
+                                .disabled(!timerDone)
+                                .sheet(isPresented: $showSuccess) {
+                                    SuccessView(selectedTab: $selectedTab)
+                                        .presentationDetents([.medium, .large])
+                                }
                         }
-                }
-                .font(.title3)
-                .padding()
+                        .font(.title3)
+                        .padding()
 
-                if showTimer {
-                    TimerView(timerDone: $timerDone, size: geometry.size.height * 0.07)
-                }
+                        if showTimer {
+                            TimerView(timerDone: $timerDone, size: geometry.size.height * 0.07)
+                        }
 
-                Spacer()
+                        Spacer()
 
-                RatingView(exerciseIndex: index)
-                    .padding()
+                        RatingView(exerciseIndex: index)
+                            .padding()
 
-                Button("History") {
-                    showHistory.toggle()
-                }
-                .padding(.bottom)
-                .sheet(isPresented: $showHistory) {
-                    HistoryView(showHistory: $showHistory)
+                        Button("History") {
+                            showHistory.toggle()
+                        }
+                        .padding(.bottom)
+                        .sheet(isPresented: $showHistory) {
+                            HistoryView(showHistory: $showHistory)
+                        }
+
+                    }
                 }
             }
         }
