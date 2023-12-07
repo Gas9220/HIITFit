@@ -69,7 +69,7 @@ struct ExerciseView: View {
     }
 
     var startButton: some View {
-        Button("Start Exercise") { 
+        RaisedButton(buttonText: "Start Exercise") {
             showTimer.toggle()
         }
     }

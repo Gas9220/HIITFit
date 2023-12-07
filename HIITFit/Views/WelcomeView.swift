@@ -42,22 +42,16 @@ struct WelcomeView: View {
                         .resizedToFill(width: 240, height: 240)
                 }
 
-                Button {
-                    withAnimation {
-                        selectedTab = 0
-                    }
-                } label: {
-                    Text("Get Started")
-                    Image(systemName: "arrow.right.circle")
-                }
-                .font(.title2)
-                .padding()
-                .background(
-                    RoundedRectangle(cornerRadius: 20)
-                        .stroke(Color.gray, lineWidth: 2)
-                )
+                getStartedButton
             }
         }
+    }
+
+    var getStartedButton: some View {
+        RaisedButton(buttonText: "Get Started") {
+            selectedTab = 0
+        }
+        .padding()
     }
 }
 
