@@ -11,6 +11,7 @@ struct WelcomeView: View {
     @Binding var selectedTab: Int
 
     @State private var showHistory = false
+    @State private var showReports = false
 
     var body: some View {
         GeometryReader { geometry in
@@ -27,14 +28,24 @@ struct WelcomeView: View {
                             WelcomeView.images
                             WelcomeView.welcomeText
                             getStartedButton
+
                             Spacer()
-                            historyButton
+
+                            HStack(spacing: 15) {
+                                historyButton
+                                reportsButton
+                            }
                         }
                         VStack {
                             WelcomeView.welcomeText
                             getStartedButton
+
                             Spacer()
-                            historyButton
+
+                            HStack(spacing: 15) {
+                                historyButton
+                                reportsButton
+                            }
                         }
                     }
                 }
@@ -42,6 +53,9 @@ struct WelcomeView: View {
             }
             .sheet(isPresented: $showHistory) {
                 HistoryView(showHistory: $showHistory)
+            }
+            .sheet(isPresented: $showReports) {
+                ReportsView()
             }
         }
     }
@@ -58,6 +72,18 @@ struct WelcomeView: View {
             showHistory = true
         } label: {
             Text("History")
+                .fontWeight(.bold)
+                .padding([.leading, .trailing], 5)
+        }
+        .padding(.bottom, 10)
+        .buttonStyle(EmbossedButtonStyle())
+    }
+
+    var reportsButton: some View {
+        Button {
+            showReports = true
+        } label: {
+            Text("Reports")
                 .fontWeight(.bold)
                 .padding([.leading, .trailing], 5)
         }
