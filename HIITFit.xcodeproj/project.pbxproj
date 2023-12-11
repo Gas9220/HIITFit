@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6B260B392B27157000D5AA4E /* history.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B260B382B27157000D5AA4E /* history.plist */; };
 		6B260B3C2B271C8700D5AA4E /* AddHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B260B3B2B271C8700D5AA4E /* AddHistoryView.swift */; };
+		6B35A1D42B27258300B54698 /* BarChartDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B35A1D32B27258300B54698 /* BarChartDayView.swift */; };
 		6B66632B2B1FCD33005A9003 /* HIITFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B66632A2B1FCD33005A9003 /* HIITFitApp.swift */; };
 		6B66632D2B1FCD33005A9003 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B66632C2B1FCD33005A9003 /* ContentView.swift */; };
 		6B66632F2B1FCD35005A9003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B66632E2B1FCD35005A9003 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		6B260B382B27157000D5AA4E /* history.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = history.plist; sourceTree = "<group>"; };
 		6B260B3B2B271C8700D5AA4E /* AddHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHistoryView.swift; sourceTree = "<group>"; };
+		6B35A1D32B27258300B54698 /* BarChartDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartDayView.swift; sourceTree = "<group>"; };
 		6B6663272B1FCD33005A9003 /* HIITFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIITFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B66632A2B1FCD33005A9003 /* HIITFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIITFitApp.swift; sourceTree = "<group>"; };
 		6B66632C2B1FCD33005A9003 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			children = (
 				6BFE0FA92B2084D100409B5C /* HistoryView.swift */,
 				6B260B3B2B271C8700D5AA4E /* AddHistoryView.swift */,
+				6B35A1D32B27258300B54698 /* BarChartDayView.swift */,
 			);
 			path = HistoryViews;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				6B6663392B1FCF27005A9003 /* WelcomeView.swift in Sources */,
 				6B66632B2B1FCD33005A9003 /* HIITFitApp.swift in Sources */,
 				6BFDC4242B22263F00E5C882 /* ContainerView.swift in Sources */,
+				6B35A1D42B27258300B54698 /* BarChartDayView.swift in Sources */,
 				6BFE0FA42B20700A00409B5C /* Exercise.swift in Sources */,
 				6BFE0FA62B207AA600409B5C /* RatingView.swift in Sources */,
 				6BFE0FAA2B2084D100409B5C /* HistoryView.swift in Sources */,
