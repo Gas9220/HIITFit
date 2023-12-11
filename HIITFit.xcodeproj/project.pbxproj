@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B260B392B27157000D5AA4E /* history.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B260B382B27157000D5AA4E /* history.plist */; };
 		6B66632B2B1FCD33005A9003 /* HIITFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B66632A2B1FCD33005A9003 /* HIITFitApp.swift */; };
 		6B66632D2B1FCD33005A9003 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B66632C2B1FCD33005A9003 /* ContentView.swift */; };
 		6B66632F2B1FCD35005A9003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B66632E2B1FCD35005A9003 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B260B382B27157000D5AA4E /* history.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = history.plist; sourceTree = "<group>"; };
 		6B6663272B1FCD33005A9003 /* HIITFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIITFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B66632A2B1FCD33005A9003 /* HIITFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIITFitApp.swift; sourceTree = "<group>"; };
 		6B66632C2B1FCD33005A9003 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		6B6663302B1FCD35005A9003 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				6B260B382B27157000D5AA4E /* history.plist */,
 				6B6663312B1FCD35005A9003 /* Preview Assets.xcassets */,
 				6BFE0FB02B208AFD00409B5C /* HistoryStoreDevData.swift */,
 			);
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B6663442B1FCFAC005A9003 /* step-up.mp4 in Resources */,
+				6B260B392B27157000D5AA4E /* history.plist in Resources */,
 				6B6663322B1FCD35005A9003 /* Preview Assets.xcassets in Resources */,
 				6B6663452B1FCFAC005A9003 /* burpee.mp4 in Resources */,
 				6B6663422B1FCFAC005A9003 /* squat.mp4 in Resources */,
