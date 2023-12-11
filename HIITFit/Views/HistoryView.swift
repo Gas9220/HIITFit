@@ -10,7 +10,7 @@ import SwiftUI
 struct HistoryView: View {
     @EnvironmentObject var history: HistoryStore
     @Binding var showHistory: Bool
-    
+
     var headerView: some View {
         HStack {
             Spacer()
@@ -25,7 +25,7 @@ struct HistoryView: View {
             .font(.title)
         }
     }
-    
+
     func dayView(day: ExerciseDay) -> some View {
         Section(
             header:
@@ -34,13 +34,14 @@ struct HistoryView: View {
                     exerciseView(day: day)
                 }
     }
-    
+
     func exerciseView(day: ExerciseDay) -> some View {
-        ForEach(day.exercises, id: \.self) { exercise in
+        ForEach(day.uniqueExercises, id: \.self) { exercise in
             Text(exercise)
+                .badge(day.countExercise(exercise: exercise))
         }
     }
-    
+
     var body: some View {
         VStack {
             headerView

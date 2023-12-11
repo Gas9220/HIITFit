@@ -11,17 +11,25 @@ struct ExerciseDay: Identifiable {
     let id = UUID()
     var date: Date
     var exercises: [String] = []
+
+    var uniqueExercises: [String] {
+        Array(Set(exercises)).sorted(by: <)
+    }
+
+    func countExercise(exercise: String) -> Int {
+        exercises.filter { $0 == exercise }.count
+    }
 }
 
 class HistoryStore: ObservableObject {
     @Published var exerciseDays: [ExerciseDay] = []
     @Published var loadingError = false
-    
+
     enum FileError: Error {
         case loadFailure
         case saveFailure
     }
-    
+
     init(preview: Bool = false) {
         do {
             try load()
@@ -39,12 +47,12 @@ class HistoryStore: ObservableObject {
         }
 #endif
     }
-    
+
     var dataURL: URL {
         URL.documentsDirectory
             .appendingPathComponent("history.plist")
     }
-    
+
     func load() throws {
         guard let data = try? Data(contentsOf: dataURL) else {
             return
@@ -64,7 +72,7 @@ class HistoryStore: ObservableObject {
             throw FileError.loadFailure
         }
     }
-    
+
     func save() throws {
         let plistData = exerciseDays.map {
             [$0.id.uuidString, $0.date, $0.exercises]
@@ -79,7 +87,7 @@ class HistoryStore: ObservableObject {
             throw FileError.saveFailure
         }
     }
-    
+
     func addDoneExercise(_ exerciseName: String) {
         let today = Date()
         if let firstDate = exerciseDays.first?.date,
