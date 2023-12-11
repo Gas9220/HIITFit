@@ -21,7 +21,7 @@ struct HistoryView: View {
                 Image(systemName: "plus")
             }
             .padding(.trailing)
-            
+
             EditButton()
 
             Spacer()
@@ -55,11 +55,26 @@ struct HistoryView: View {
 
     var body: some View {
         VStack {
-            headerView
+            Group {
+                if addMode {
+                    Text("History")
+                        .font(.title)
+                } else {
+                    headerView
+                }
+            }
                 .padding()
             List($history.exerciseDays, editActions: [.delete]) { $day in
                 dayView(day: day)
                     .deleteDisabled(true)
+            }
+
+            if addMode {
+                AddHistoryView(addMode: $addMode)
+                    .background(Color.primary.colorInvert()
+                        .shadow(color: .primary.opacity(0.5), radius: 7)
+                    )
+
             }
         }
         .onDisappear {

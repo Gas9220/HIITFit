@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6B260B392B27157000D5AA4E /* history.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B260B382B27157000D5AA4E /* history.plist */; };
+		6B260B3C2B271C8700D5AA4E /* AddHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B260B3B2B271C8700D5AA4E /* AddHistoryView.swift */; };
 		6B66632B2B1FCD33005A9003 /* HIITFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B66632A2B1FCD33005A9003 /* HIITFitApp.swift */; };
 		6B66632D2B1FCD33005A9003 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B66632C2B1FCD33005A9003 /* ContentView.swift */; };
 		6B66632F2B1FCD35005A9003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B66632E2B1FCD35005A9003 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		6B260B382B27157000D5AA4E /* history.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = history.plist; sourceTree = "<group>"; };
+		6B260B3B2B271C8700D5AA4E /* AddHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHistoryView.swift; sourceTree = "<group>"; };
 		6B6663272B1FCD33005A9003 /* HIITFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIITFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B66632A2B1FCD33005A9003 /* HIITFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIITFitApp.swift; sourceTree = "<group>"; };
 		6B66632C2B1FCD33005A9003 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B260B3A2B271C5F00D5AA4E /* HistoryViews */ = {
+			isa = PBXGroup;
+			children = (
+				6BFE0FA92B2084D100409B5C /* HistoryView.swift */,
+				6B260B3B2B271C8700D5AA4E /* AddHistoryView.swift */,
+			);
+			path = HistoryViews;
+			sourceTree = "<group>";
+		};
 		6B66631E2B1FCD33005A9003 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +133,7 @@
 		6B66633C2B1FCF52005A9003 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6B260B3A2B271C5F00D5AA4E /* HistoryViews */,
 				6B66632C2B1FCD33005A9003 /* ContentView.swift */,
 				6B6663382B1FCF27005A9003 /* WelcomeView.swift */,
 				6B66633A2B1FCF37005A9003 /* ExerciseView.swift */,
@@ -129,7 +141,6 @@
 				6BFE0FA12B206EC000409B5C /* HeaderView.swift */,
 				6BFDC4212B22106C00E5C882 /* EmbossedButton.swift */,
 				6BFE0FA52B207AA600409B5C /* RatingView.swift */,
-				6BFE0FA92B2084D100409B5C /* HistoryView.swift */,
 				6BFE0FB42B2093DA00409B5C /* SuccessView.swift */,
 				6BFE0FB62B20B8E800409B5C /* TimerView.swift */,
 				6BFDC41D2B220AC200E5C882 /* WelcomeImages.swift */,
@@ -235,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B260B3C2B271C8700D5AA4E /* AddHistoryView.swift in Sources */,
 				6BFDC41E2B220AC200E5C882 /* WelcomeImages.swift in Sources */,
 				6BFE0FB72B20B8E800409B5C /* TimerView.swift in Sources */,
 				6BFE0FB12B208AFD00409B5C /* HistoryStoreDevData.swift in Sources */,

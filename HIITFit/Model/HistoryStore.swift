@@ -104,4 +104,19 @@ class HistoryStore: ObservableObject {
             fatalError(error.localizedDescription)
         }
     }
+
+    func addExercise(date: Date, exerciseName: String) {
+      let exerciseDay = ExerciseDay(date: date, exercises: [exerciseName])
+
+      if let index = exerciseDays.firstIndex(where: { $0.date.yearMonthDay <= date.yearMonthDay }) {
+        if date.isSameDay(as: exerciseDays[index].date) {
+          exerciseDays[index].exercises.append(exerciseName)
+        } else {
+          exerciseDays.insert(exerciseDay, at: index)
+        }
+      } else {
+        exerciseDays.append(exerciseDay)
+      }
+      try? save()
+    }
 }
