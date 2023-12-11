@@ -10,7 +10,7 @@ import Charts
 
 struct BarChartDayView: View {
     let day: ExerciseDay
-    
+
     var body: some View {
         Chart {
             ForEach(Exercise.names, id: \.self) { name in
@@ -27,8 +27,8 @@ struct BarChartDayView: View {
 }
 
 #Preview {
-    var history = HistoryStore(preview: true)
-    
+    let history = HistoryStore(preview: true)
+
     return BarChartDayView(day: history.exerciseDays[0])
         .environmentObject(history)
 }
