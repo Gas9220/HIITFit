@@ -11,8 +11,19 @@ struct HistoryView: View {
     @EnvironmentObject var history: HistoryStore
     @Binding var showHistory: Bool
 
+    @State private var addMode = false
+
     var headerView: some View {
         HStack {
+            Button {
+                addMode = true
+            } label: {
+                Image(systemName: "plus")
+            }
+            .padding(.trailing)
+            
+            EditButton()
+
             Spacer()
             Text("History")
                 .font(.title)
@@ -27,12 +38,12 @@ struct HistoryView: View {
     }
 
     func dayView(day: ExerciseDay) -> some View {
-        Section(
-            header:
-                Text(day.date.formatted(as: "MMM d"))
-                .font(.headline)) {
-                    exerciseView(day: day)
-                }
+        DisclosureGroup {
+            exerciseView(day: day)
+        } label: {
+            Text(day.date.formatted(as: "d MMM YYYY"))
+                .font(.headline)
+        }
     }
 
     func exerciseView(day: ExerciseDay) -> some View {
@@ -46,11 +57,13 @@ struct HistoryView: View {
         VStack {
             headerView
                 .padding()
-            Form {
-                ForEach(history.exerciseDays) { day in
-                    dayView(day: day)
-                }
+            List($history.exerciseDays, editActions: [.delete]) { $day in
+                dayView(day: day)
+                    .deleteDisabled(true)
             }
+        }
+        .onDisappear {
+            try? history.save()
         }
     }
 }
